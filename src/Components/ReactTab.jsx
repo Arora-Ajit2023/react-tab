@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import React, { useState } from 'react'
-import './ReactTab.css'
+// import './ReactTab.css'
 
 const TabData = [
     [
@@ -20,6 +20,11 @@ const TabData = [
         "Official web page (react.dev)",
         "Next.js (Fullstack framework)",
         "React Native (build native mobile apps with React)"
+    ], [
+        "Vanilla JavaScript requires imperative programming",
+        "Imperative Programming: You define all the steps needed to achieve a result",
+        "React on the other hand embraces declarative programming",
+        "With React, you define the goal and React figures out how to get there"
     ]
 ]
 
@@ -44,6 +49,8 @@ const ReactTab = () => {
                     <button className={activeContentIndex === 0 ? 'active' : ''} onClick={() => setActiveContentIndex(0)}>Why React?</button>
                     <button className={activeContentIndex === 1 ? 'active' : ''} onClick={() => setActiveContentIndex(1)}>Core Features</button>
                     <button className={activeContentIndex === 2 ? 'active' : ''} onClick={() => setActiveContentIndex(2)}>Related Resources</button>
+                    <button className={activeContentIndex === 3 ? 'active' : ''}
+                        onClick={() => setActiveContentIndex(3)}>React vs Js</button>
                 </div>
                 <div id="content">
                     <ul>

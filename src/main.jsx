@@ -2,9 +2,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import ReactTab from './Components/ReactTab.jsx'
+import ParentToChildProp from './Components/ParentToChildProp.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ReactTab />
+    <ParentToChildProp />
   </React.StrictMode>,
 )
