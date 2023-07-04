@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from 'react'
+import React, { useId } from 'react'
 import { useState } from 'react'
 import ListTodo from './ListTodo'
 
@@ -8,8 +8,10 @@ const AddTodo = () => {
     const [formData, setFormData] = useState({
         title: '',
         description: '',
-        completed: false
+        completed: false,
+        id: ''
     })
+    const listId = useId()
 
     const onInputchange = (e) => {
         const { name, value, type, checked } = e.target
@@ -20,7 +22,7 @@ const AddTodo = () => {
             return (
                 {
                     ...prevData,
-                    [name]: updatedValue,
+                    [name]: updatedValue, id: listId
                 }
             )
         })
@@ -31,7 +33,7 @@ const AddTodo = () => {
         e.preventDefault();
         setData((prevData) => {
             return (
-                [...prevData, formData]
+                [...prevData, formData,]
             )
         })
         setFormData({
