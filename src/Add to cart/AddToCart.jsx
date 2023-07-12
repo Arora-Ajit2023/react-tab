@@ -1,13 +1,11 @@
 /* eslint-disable no-prototype-builtins */
 // @ts-nocheck
 import React, { useEffect, useState } from 'react';
-import ProductList from './ProductList';
-import Card from './Card';
 
 const AddToCart = () => {
   const [products, setProducts] = useState([]);
   const [cartData, setCartData] = useState([]);
-  // const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then((data) => data.json())
