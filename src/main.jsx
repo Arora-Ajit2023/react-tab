@@ -9,11 +9,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Parent from './Memo/Parent';
 import TeaSet from './Memo/Child';
+import { LoopBad } from './UseMemo/LoopBad';
+import { LoopsGood } from './UseMemo/LoopGood';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Products />,
+    element: <LoopsGood />,
   },
   {
     path: '/cart',
@@ -22,8 +24,6 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
-    {/* <ToastContainer />
-    <RouterProvider router={router} /> */}
-    {/* <Parent /> */}
+    <RouterProvider router={router} />
   </>
 );
